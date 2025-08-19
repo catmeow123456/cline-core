@@ -133,12 +133,10 @@ function listExamples() {
   console.log('  basic     - 基础示例：创建 Hello World 脚本');
   console.log('  plan      - 计划模式示例：构建 REST API 服务器');
   console.log('  mcp       - MCP 集成示例：使用文件系统 MCP 服务器');
-  console.log('  all       - 运行所有示例');
   console.log('\n使用方法:');
   console.log('  yarn example:basic');
   console.log('  yarn example:plan');
   console.log('  yarn example:mcp');
-  console.log('  yarn example:all');
 }
 
 // 运行指定的示例
@@ -160,17 +158,6 @@ async function runExample(exampleType: string) {
       case 'mcp':
         await mcpExample();
         console.log('\n✅ MCP 示例完成');
-        break;
-        
-      case 'all':
-        await basicExample();
-        console.log('\n=== 基础示例完成 ===\n');
-        
-        await planModeExample();
-        console.log('\n=== 计划模式示例完成 ===\n');
-        
-        await mcpExample();
-        console.log('\n=== MCP 示例完成 ===');
         break;
         
       default:

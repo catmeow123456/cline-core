@@ -338,6 +338,9 @@ export class Task {
   }
 
   private async presentAssistantMessage(): Promise<void> {
+		if (this.state.abort) {
+			throw new Error("Cline instance aborted")
+		}
     if (this.currentStreamingContentIndex >= this.assistantMessageContent.length) {
       this.userMessageContentReady = true;
       return;

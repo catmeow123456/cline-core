@@ -140,7 +140,7 @@ class Task {
       
       // 2. 解析和展示内容块
       for await (const chunk of stream) {
-        this.assistantMessageContent = parseAssistantMessageV2(chunk.text)
+        this.assistantMessageContent = parseAssistantMessage(chunk.text)
         await this.presentAssistantMessage()
       }
       

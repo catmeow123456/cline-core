@@ -7,7 +7,7 @@ async function demo() {
   const cline = new ClineCore({
     apiProvider: "anthropic",
     apiKey: process.env.ANTHROPIC_API_KEY || "your-api-key-here",
-    model: "claude-3-5-sonnet-20241022",
+    model: "claude-sonnet-4-20250514",
     mode: "act",
     workingDirectory: process.cwd(),
     // 可选：使用自定义的 Anthropic base URL
